@@ -172,20 +172,26 @@ h1{
     box-shadow: 0px 0px 10px 1px #3f3e3e;
 }
 
-.conteiner--iframe--agrim{
-    min-width: 300px;
-    display: flex;
+/* Selecetores para dar estilo al iframe video*/
+.block-video{
+    display:flex;
+    flex-direction: column;
     align-items: center;
-}
-.conteiner--iframe--agrim .agrim-iframe{
-    border-radius: 70px;
-    border: 5px solid gray;
-    margin:auto;
-}
-.block-div--disposicion{
-    flex-direction:column;
+    justify-content: center;
     margin-top:40px;
 }
+.conteiner--iframe--agrim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+.iframe--agrim{
+    border-radius: 10px;
+}
+
+
+
 
 /* ----------------- END  PAGINA AGRIMEMNSURA ---------------------------- */
 
@@ -249,14 +255,9 @@ code{
     color: #312828;
 }
 /* ----------------- END  PAGINA DESARROLLO ---------------------------- */
+
 /*---------------------------- START PAGINA CONTACTO ----------------*/
-.advertencia{
-    color: red;
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 0.5rem;
-}
+
 .block-contacto{
     display: flex;
     flex-direction: column;
@@ -414,11 +415,11 @@ footer{
 /*------------------ media queries ----------------------------*/
 /* Media query para tabletas y computadoras de escritorio */
 @media (min-width: 340px) {
-    .block-agrim__title{
-        font-family: "Times New Roman", serif; 
-        font-weight: bold;
-        font-style: italic; 
-        font-size: 0.8rem;
+    .format__titulo{
+        font-size: 0.7rem;
+        }
+        .footer__parrafo {
+            font-size: 0.4rem;
     }
 
 }
@@ -426,6 +427,10 @@ footer{
 
     .block-contacto{
         flex-direction: row;
+    }
+    .iframe--agrim{
+        width:560px;
+        height:315px;
     }
 }
 
