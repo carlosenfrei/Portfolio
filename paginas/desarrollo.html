@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"><!--habilita caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--content="width=device-width me indica que la pagina se adapta al ancho del viewport del dispositivo ////initial-scale=1.0 pone el  visualizazdor en escala 1 no disminuye nin acerca-->
+
+
+    <meta name="description" content="Esta pagina sirve para poder tener contacto con el cliente">
+    <meta name="keywords" content="desarrollo web, topografia, agrimensura, pastas, fideos, ravioles, sorrentinos, salsas, cocteleria, destilados">
+    <meta name="author" content="Carlos Enrique Freixas">
+    <meta name="robot" content="nosnipe" ><!--content="nofollow"  para que no muestre la pagina en las busquedas ////content="nosnipe"  no permite que se muestre ningun fragmento de codigo /// content="noarchive" para que no se guarde en el cache de la maquina del usuario porque la pagina se modifica constantemente-->
+    <meta name="OG:title" content="El Charlie Freixas">
+    <meta name="OG:image" content="url de la imagen">
+    <meta name="OG:description" content="mi nombre es Carlos Enrique Freixas, Argentino. Agrimensor recibido de la FIUBA, futuro piloto de VANTS clase A, B y C, soy profesional en pastas y salsas egresado de APYCE, bartender profesional del IAC y estudiando actualmente la carrera de desarrollador de app en CODERHOUSE">
+
+    <!-- Enlace a botstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--Enlace a archivo de estilos de css-->
+    <link rel="stylesheet" href="../css/style.css"> 
+
+    <!--Enlace a estilo de texto de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"><!--Incorporo un estilo de texto que no tengo en la computadora por un enlace url a otra pagina-->
+
+    <!--INCORPORO UN ICONO EN LA BARRA DE TITULO O DE PESTAÑA-->
+    <link rel="icon" href="../imagen/usuario.png" type="image/png">
+    <title>Desarrollo</title>
+
+</head>
+<body>
+    <!------------------------ ENCABEZADO O HEADER --------------------->
+    <header class="header__container">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="header__img" src="../imagen/logo.PNG" alt="Logo de Carlos Enrique Freixas"></a>
+                <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  font__a--altura" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./agrimensor.html">Agrimensura</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./gastronomia.html">Gastronomía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="#">Desarrollo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <!-- ------------FIN ENCABEZADO O HEADER  --------->
+    <main>
+        <h1>Programación</h1>
+        <div class="block-div">
+            <p class = "format__parrafo">El destino me llevó a escribir código mientras estudiaba Agrimensura en la FIUBA, y descubrí que me agrada. Tengo conocimientos en Python y Visual Lisp, y actualmente estoy estudiando Desarrollo de Aplicaciones en CODERHOUSE. Mi objetivo es crear una app que integre información de distintas fuentes y facilite el contacto con clientes para mis servicios en gastronomía, agrimensura y docencia. Además, no descarto la posibilidad de desarrollarme profesionalmente en el mundo del desarrollo de aplicaciones.</p>
+            <h2 class= "format__titulo">Aqui te dejo un par de ejemplos</h2>
+        </div>
+        
+        <div class= "block-div">
+            <h3>Conomimentos en AutoLisp y Visual-Lisp aplicado para Autocad o Autocad Map</h3>
+
+            <code>
+                (DEFUN C:ELF ()
+                (alert "Comando ELF (EXPORTA LINEAS FRENTISTAS)")
+                (setvar "cmddia" 0)
+                (setq unidad "D:\\")
+                (setq archivo (open (STRCAT unidad"CARGA\\lista.TXT") "r"))
+                (setq numlinea (read-line archivo))
+                (while (/= numlinea "FIN")
+                    (setq sec numlinea)
+                    (setq path (strcat unidad"SECCIONES\\" sec ".DWG"))
+                    (COMMAND "ADEDRAWINGS" "ATTACH" path "x")
+                    (COMMAND "ADEQUERY" "CLEAR" "DEFINE" "PROPERTIES" "LAYER" 
+                                "PARCELAS_SIN_PROCESAR" "DATA" "AND" "OBJDATA" 
+                                "LADO_PARCELA" "SECCION" "=" sec "DATA" "ANDNOT" 
+                                "OBJDATA" "LADO_PARCELA" "LINDERO" "=" "PARCELA" 
+                                "DATA" "ANDNOT" "OBJDATA" "LADO_PARCELA" "OCHAVA" "=" "X" "X" "E" "D")
+                    (COMMAND "ADEDRAWINGS" "DETACH" "*" "EXIT")
+                    (COMMAND "ZOOM" "E")
+                    (command "-mapexport" "shp" (strcat unidad "SECCIONES\\SHP\\" sec "fre") 
+                                "yes" "R:\\SECCIONES\\AUXILIARES\\exportar_lineas_parcela_frentes.epf" 
+                                "Proceed")
+                    (command "erase" "all" "")
+                    (setq numlinea (read-line archivo))
+                )
+                (CLOSE archivo)
+                (setvar "cmddia" 1)
+                )
+            </code>
+            <p class="text_comentario">Al cargar la rutina en AutoCAD Map mediante la línea de comandos con APpload e ingresando el comando ELF, el sistema consultará un archivo de texto con los datos requeridos. Luego, mediante ADEQUERY, extraerá la información desde un archivo DWG y la representará gráficamente en el entorno de AutoCAD. Finalmente, los datos procesados se exportarán como un archivo SHAPEFILE, almacenado en una ruta específica.</p>
+
+            <h3>Conocimentos en python aplicado a ArcMAp y QGIS</h3>
+
+            <p class="format__parrafo">Estudie programación en Python orientado a los Sistemas de Información Geografica SIG en MAPPING GIS (España)</p>
+
+                <code>from qgis.core import *
+                    import qgis.utils
+                    ##carga la capa de urbano en la TOC con una transparencia de 50% 
+                    layer = QgsVectorLayer("D:\\CURSO_PYQGIS\\capas\\urbano.shp","urbano","ogr")
+                    layer.setProviderEncoding('UTF-8') #capa codificada con utf-8 
+                    QgsProject.instance().addMapLayer(layer)
+                    if not layer.isValid():
+                        print ("la capa no es valida")
+                    renderer = layer.renderer()
+                    symbol = renderer.symbol()
+                    symbol.setOpacity(0.5)
+                </code>
+
+            <p class="text_comentario">Carga un archivo ShapeFile con una trasnparencia de 50% respetando los caracteres especiales. </p>
+            
+        </div>
+    </main>
+    
+    <footer >
+        <div>
+            <p class="footer__parrafo">Mi primer sitio web 2025-01 - V1.0 - <span>Carlos Enrique Freixas</span> </p> 
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

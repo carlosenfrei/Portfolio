@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"><!--habilita caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--content="width=device-width me indica que la pagina se adapta al ancho del viewport del dispositivo ////initial-scale=1.0 pone el  visualizazdor en escala 1 no disminuye nin acerca-->
+
+
+    <meta name="description" content="Esta pagina sirve para poder tener contacto con el cliente">
+    <meta name="keywords" content="desarrollo web, topografia, agrimensura, pastas, fideos, ravioles, sorrentinos, salsas, cocteleria, destilados">
+    <meta name="author" content="Carlos Enrique Freixas">
+    <meta name="robot" content="nosnipe" ><!--content="nofollow"  para que no muestre la pagina en las busquedas ////content="nosnipe"  no permite que se muestre ningun fragmento de codigo /// content="noarchive" para que no se guarde en el cache de la maquina del usuario porque la pagina se modifica constantemente-->
+    <meta name="OG:title" content="El Charlie Freixas">
+    <meta name="OG:image" content="url de la imagen">
+    <meta name="OG:description" content="mi nombre es Carlos Enrique Freixas, Argentino. Agrimensor recibido de la FIUBA, futuro piloto de VANTS clase A, B y C, soy profesional en pastas y salsas egresado de APYCE, bartender profesional del IAC y estudiando actualmente la carrera de desarrollador de app en CODERHOUSE">
+
+    <!-- Enlace a botstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--Enlace a archivo de estilos de css-->
+    <link rel="stylesheet" href="../css/style.css"> 
+
+    <!--Enlace a estilo de texto de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"><!--Incorporo un estilo de texto que no tengo en la computadora por un enlace url a otra pagina-->
+
+    <!--INCORPORO UN ICONO EN LA BARRA DE TITULO O DE PESTAÑA-->
+    <link rel="icon" href="../imagen/usuario.png" type="image/png">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <!------------------------ ENCABEZADO O HEADER --------------------->
+    <header class="header__container">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="header__img" src="../imagen/logo.PNG" alt="Logo de Carlos Enrique Freixas">
+                </a>
+                <button class="navbar-toggler navbar-toggler--padding"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-toggler-icon--size">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  font__a--altura" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./agrimensor.html">Agrimensura</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./gastronomia.html">Gastronomía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="./desarrollo.html">Desarrollo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font__a--altura" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <!-- ------------FIN ENCABEZADO O HEADER  --------->
+        <main>
+                <p class="advertencia">El formulario es a efectos de una entrega de TP, para contactarse, enviar email a <span class="span--size">
+                    carlosenfrei@gmail.com </span> </p>
+                <h2 class="format__titulo">Formulario de contacto </h2>
+                <p class="block-contacto__text">Completa el formulario para poder estar en contacto y poder responder tus inquietudes</p>
+                <div class="block-contacto">
+                <form  class="form-contacto"action="">
+                    <!--Encasillamimento de datos por categoria encerrado por un cauadrado con una leyenda, a continuacion se muestra el modo de proceder, entre los fieldset se colocan
+                    <fieldset>
+                        <legend>titulo de aksdnljasdkjasn</legend>
+                            <input class="imput-text"type="text" name="nombre" id="" required placeholder="Ingresa tu nombre">
+                            <input class="imput-text"type="text" name="apellido" id="apellido" required="" placeholder="Ingresa tu apellido">
+                            <input class="imput-text"type="email" name="correo" id="correo" placeholder="Ingresa tu correo electronico" required>
+                    </fieldset>-->
+                    <!--Si deseo colocar una etiqueta y que quede vinculado con le input y no quiero usar el for en el label e id en el input coloco las label entre medio de los input es decir <label>ashdkajkadsh <input type="text"></label>-->
+                    <input class="imput-text"type="text" name="nombre" id="" required placeholder="Ingresa tu nombre">
+                    <input class="imput-text"type="text" name="apellido" id="apellido" required="" placeholder="Ingresa tu apellido">
+                    <input class="imput-text"type="email" name="correo" id="correo" placeholder="Ingresa tu correo electronico" required>
+                    <h3 class="block-contacto__title title--size">Selecciona el tema por el que consultas</h3>
+                    <div class="selector-radio-button">
+                        <label class="radio-item" for=""><input class="input-radio" type="radio" name="radio-group" id="">Agrimensura</label>
+                        <label class="radio-item" for=""><input class="input-radio" type="radio" name="radio-group" id="">Gastronomia</label>
+                    </div>
+                    <div class="selector-radio-button">
+                        <label class="radio-item" for=""><input class="input-radio" type="radio" name="radio-group" id="">Programacion</label>
+                        <label class="radio-item" for=""><input class="input-radio" type="radio" name="radio-group" id="">Otro tema</label>
+                    </div>
+                    <textarea name="parrafo" id="" placeholder="Escriba su inquietud o lo que necesite, se respondera a la brevedad." maxlength="550" ></textarea><!--algunos booleanos utiles para texarea que se aplican con solo escribirlo y se activan readonly (lo que esta en el textarea no se puede modificar, pero cuando se envia el formulario se envia el contenido pero si hago focus se activa) disabled no se puede modificar se lee no se puede enfocar y ciando se envia el vormulario no se envia el contenido / maxlength="nuro de catacterers maximo que se puede escribir" / rows ="ingreso la cantitdad de lineas que se admiten en el textarea"-->
+                    <input class="imput-boton" type="submit" value="Enviar" class="input_button">
+                </form>
+                <div class="block-contacto-mapa">
+                    <h2 class="block-contacto-mapa__title">Donde estoy!</h2>
+                    <iframe class="block-contacto-mapa__mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7616.224342939575!2d-58.472563011370106!3d-34.644266745472684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1738106163470!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+            </div>
+    </main>
+
+    <footer >
+        <div >
+            <p class="footer__parrafo">Mi primer sitio web 2025-01 - V1.0 - <span>Carlos Enrique Freixas</span> </p> 
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
