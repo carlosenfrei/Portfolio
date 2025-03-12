@@ -58,10 +58,13 @@ h1{
 
 /* -------------------- Estilado de titulos h2  h3 ... --------------------- */
 .format__titulo {
-    font-family: "Times New Roman", serif; 
+    font-family: v.$font-principal-stack; 
     font-weight: bold;
     font-style: italic; 
     font-size: 1rem;
+}
+.titulo--justify{
+    padding: 0 5%;
 }
 
 .format__parrafo{
