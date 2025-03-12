@@ -1,0 +1,56 @@
+.header__container{
+    grid-area: header;
+}
+.header__img {
+    margin: 2%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 1px black; /* desplazazmiento hz -- despl vert -- opacidad difuninado de la sombre --expansion de la sombra -- color*/
+}
+
+/* --------------- Inicio barra de navegacion ------------------*/
+  /* Se modifica el boton que establece botstrap */
+.navbar-toggler-icon {
+    width: 30px; /* Ajusta el ancho */
+    height: 30px; /* Ajusta la altura */
+}
+
+.navbar-toggler {
+    padding: 10px;
+    border: none;
+}
+
+.navbar-toggler:active {
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.font__a--altura {
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+
+.nav-link:hover {
+    transform: scale(0.9); /* Escala ligeramente */
+    color: #009cde; /* Cambia a un color al pasar el mouse */
+    transition: color 0.7s linear, transform 0.5s;
+}
+
+
+.nav-link:active {
+    color: #f2a900; /* Cambia a otro color mientras haces clic */
+}
+    
+    /*.ul__link:visited{
+        color: #5353510c; /* Cambia a otro color si ya fue visitado 
+    }*/
+
+
+    /* ---------------- FIN barra de navegacion ----------------*/
+    
+/* -------------------- END HEADER --------------------- */

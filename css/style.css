@@ -1,450 +1,444 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:"Figtree", serif;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", serif;
 }
 
-html{
-    font-size: 32px;
+.header__container {
+  grid-area: header;
 }
 
-body {
-    background: linear-gradient(to top, #575555 60%, transparent);
-    color: black;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:    "header"
-                            "main"
-                            "footer";
-    min-height: 100vh;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-span{
-    font-weight: bold;
-}
-/* --------------- Inicio de Header ----------*/
-
-.header__container{
-    grid-area: header;
-}
-
-.header__img{
-    margin: 2%;
-    width: 60px;
-    height:60px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px 1px black;/* desplazazmiento hz -- despl vert -- opacidad difuninado de la sombre --expansion de la sombra -- color*/
-}
-
-/* Se modifica el boton que establece botstrap */
-.navbar-toggler-icon{
-    width: 30px;  /* Ajusta el ancho */
-    height: 30px; /* Ajusta la altura */
-}
-.navbar-toggler{
-    padding:10px;
-    border:none;
-}
-.navbar-toggler:active{
-    box-shadow: none;
-}
-.navbar-toggler:focus{
-    box-shadow: none;
+.header__img {
+  margin: 2%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 1px black; /* desplazazmiento hz -- despl vert -- opacidad difuninado de la sombre --expansion de la sombra -- color*/
 }
 
 /* --------------- Inicio barra de navegacion ------------------*/
-.font__a--altura{
-    font-size: 0.6rem;
-    font-weight: bold;
+/* Se modifica el boton que establece botstrap */
+.navbar-toggler-icon {
+  width: 30px; /* Ajusta el ancho */
+  height: 30px; /* Ajusta la altura */
 }
-.nav-link:hover{
-    color: #009cde; /* Cambia a un color al pasar el mouse */
-    transform: scale(0.9); /* Escala ligeramente */
 
+.navbar-toggler {
+  padding: 10px;
+  border: none;
 }
-.nav-link:active{
-    color: #f2a900; /* Cambia a otro color mientras haces clic */
+
+.navbar-toggler:active {
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.font__a--altura {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  transform: scale(0.9); /* Escala ligeramente */
+  color: #009cde; /* Cambia a un color al pasar el mouse */
+  transition: color 0.7s linear, transform 0.5s;
+}
+
+.nav-link:active {
+  color: #f2a900; /* Cambia a otro color mientras haces clic */
 }
 
 /*.ul__link:visited{
-    color: #5353510c; /* Cambia a otro color mientras haces clic 
+    color: #5353510c; /* Cambia a otro color si ya fue visitado 
 }*/
-
 /* ---------------- FIN barra de navegacion ----------------*/
-
-
-
 /* -------------------- END HEADER --------------------- */
-/*-------------------- INICIAL MAIN -------------------- */
-
-main{
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    min-width: 344px;
-}
-h1{
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    font-size: 1.2rem;
-    text-align: center;
-}
-.block-div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.format__titulo {
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    font-size: 1rem;
+.card-personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
-.format__parrafo{
-    justify-content: end;
-    width: 90%;
-    font-size: 0.5rem;
-    font-style: italic; 
-    text-align: justify;
-    border-left: 3px solid gray;
-    padding-left: 2%;
-    margin-left:3%;
-    white-space: pre-wrap;
+.card-body-personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
-
-/*---------------------------- fin estilado index ----------------*/
-
-
-/*---------------------------- START PAGINA AGRIMENSURA ----------------*/
-
-.card-personal{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-}
-.card-body-personal{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex:1;
-}
-.img--size{
-    width: 50%;
-}
-.card h3{
-    margin-top:10px;
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    text-align: center;
-    font-size: 0.6rem;
+.img--size {
+  width: 50%;
 }
 
-.card p{
-    font-style: italic;
-    font-size: 0.4rem;
-    text-align: justify;
-
-} 
-.container__a{
-    text-align: right;
-}
-.container__a .botton{
-    background-color: #7bf;
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 0.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #3f3e3e;
-}
-.container__a .botton:hover{
-    box-shadow: 0px 0px 10px 1px #3f3e3e;
+.card h3 {
+  margin-top: 10px;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.6rem;
 }
 
-/* Selecetores para dar estilo al iframe video*/
-.block-video{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top:40px;
-}
-.conteiner--iframe--agrim{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-}
-.iframe--agrim{
-    border-radius: 10px;
+.card p {
+  font-style: italic;
+  font-size: 0.4rem;
+  /*text-align: justify;*/
 }
 
-
-
-
-/* ----------------- END  PAGINA AGRIMEMNSURA ---------------------------- */
-
-
-
-
-/*---------------------------- START PAGINA GASTRONOMIA ----------------*/
-
-.card-personal--border--pastas{
-    border:3px solid #165a08;
-}
-.card-personal--border--pizza{
-    border:3px solid #cc1313;
-}
-.card-personal--border--bombones{
-    border:3px solid #8f5908;
-}
-.card-personal--border--bartender{
-    border:3px solid #08528f;
-}
-.img__format{
-    margin-top: 20px;
-    width: 100px;
-    height:100px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px 1px black;/* desplazazmiento hz -- despl vert -- opacidad difuninado de la sombre --expansion de la sombra -- color*/
-    
+.card-personal:hover {
+  transform: translateY(-10px);
 }
 
-/* ----------------- END  PAGINA GASTRONOMIA ---------------------------- */
-/*---------------------------- START PAGINA DESARROLLO ----------------*/
-
-.block-div h3{
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    text-align: center;
-    font-size: 0.6rem;
+.card-personal--border--pastas {
+  border: 3px solid #165a08;
 }
 
-code{
-    padding-left: 2%;
-    margin-left:3%;
-    width: 90%;
-    background-color: gray;
-    text-align: left;
-    font-size: 0.5rem;;
-    border-left: 3px solid rgb(7, 7, 7);
-    color:#08528f;
-}
-.text_comentario{
-    justify-content: center;
-    width: 90%;
-    font-size: 0.5rem;
-    font-style: italic; 
-    text-align: justify;
-    padding: 1%;
-    margin-top:1%;
-    margin-left:3%;
-    white-space: pre-wrap;
-    color: #312828;
-}
-/* ----------------- END  PAGINA DESARROLLO ---------------------------- */
-
-/*---------------------------- START PAGINA CONTACTO ----------------*/
-
-.block-contacto{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    gap: 5%;
-    background-color:transparent;
-    justify-content: center;
-    align-items: center;
-}
-.block-contacto__title{
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    margin:0;
-    font-size: 0.8rem;
-    width: 100%;
-}
-.block-contacto__text{
-    font-size: 0.4rem;
-    font-style: italic; 
-    text-align: justify;
-    padding: 0;
-    margin-left: 1%;
-    width: 90%;
-}
-.form-contacto{
-    min-width: 300px;
-    display: flex;
-    flex-flow: column wrap;
-}
-.imput-text{
-    background-color:  #f7f2f2;
-    margin: 10px;
-    padding: 6px 12px;
-    width: 90%; 
-    letter-spacing: 2px;
-    border: none;
-    border-left: 4px solid #009cde;
-    font-size: 0.4em;
-    color: #009cde ;
-    font-family: inherit;
-    border-radius: 10px;
-}
-.title--size{
-    font-size: 0.5rem;
-}
-.selector-radio-button{
-    display:flex;
-    flex-flow: row wrap;
-    background-color:transparent;
-    justify-content: flex-start;
+.card-personal--border--pizza {
+  border: 3px solid #cc1313;
 }
 
-.radio-item{
-    margin: 0px;
-    padding: 20px;
-    align-content: center;
-    font-size: 0.5em;
-}
-textarea {
-    background-color:  #f7f2f2;
-    min-height: 30vh;
-    font-size: 0.4em;
-    width: 80%;
-    border-radius: 10px;
-    border-left: 4px solid #009cde;
-    margin: 10px;
-    padding: 6px 12px;
+.card-personal--border--bombones {
+  border: 3px solid #8f5908;
 }
 
-  /* inicio Botón específico */
-.imput-boton {
-    padding: 10px;
-    margin: 10px;
-    background-color: #3f3e3e;
-    border: 1px solid #009cde;
-    color: #009cde;
-    font-size: 0.4rem;
-    font-weight: bold;
-    position:relative;
-    width: 30%;
-    left: 47%;
-    border-radius: 10px;
-}
-.imput-boton:active{
-    background-color: #009cde;
-}
-.imput-boton:hover{
-    background-color: #b3b6b8;
-}
-  /* fin Botón específico */
-
-  /* inicio mapa */
-.block-contacto-mapa{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px ;
-    padding: 0;
-    border-radius: 0;
-    gap: 5%;
-    background-color:transparent;
-    max-width: 500px; /*permite que se estire hasta un valor maximo*/
-}
-.block-contacto-mapa__title{
-    font-family: "Times New Roman", serif; 
-    font-weight: bold;
-    font-style: italic; 
-    margin:0;
-    font-size: 0.8rem;
-    width: 100%;
+.card-personal--border--bartender {
+  border: 3px solid #08528f;
 }
 
-.block-contacto-mapa__mapa{ 
-    width: 100%;
-    border-radius: 30px;
-
+.card .img__format {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 1px black; /* desplazazmiento hz -- despl vert -- opacidad difuninado de la sombre --expansion de la sombra -- color*/
 }
-  /* fin mapa */
-/*---------------------------- END PAGINA CONTACTO ----------------*/
 
+/*ubicacion del boton dentro del contenedor y efecto sombra*/
+.container__a {
+  text-align: right;
+}
+.container__a .botton:hover {
+  box-shadow: 0px 0px 10px 1px #3f3e3e;
+}
 
-/*-------------------- END MAIN -------------------- */
-
+.botton {
+  background-color: #7bf;
+  color: #575555;
+  font-size: 0.4rem;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /*-------------------- INICIAL FOOTER -------------------- */
-
-
-
-footer{
-    grid-area: footer;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-end;
-    align-items: center;
-    padding:3%;
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3%;
 }
 
 .footer__parrafo {
-    text-align: center;
-    font-size: 0.7rem;
-    color:whitesmoke;
-    white-space: pre-wrap;
-    margin: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: whitesmoke;
+  white-space: pre-wrap;
+  margin: 0;
 }
-
 
 /*---------------------------- END footer ----------------*/
-
-
-
-/*------------------ media queries ----------------------------*/
-/* Media query para tabletas y computadoras de escritorio */
 @media (min-width: 340px) {
-    .format__titulo{
-        font-size: 0.7rem;
-        }
-        .footer__parrafo {
-            font-size: 0.4rem;
-    }
-
+  .format__titulo {
+    font-size: 0.7rem;
+  }
+  .footer__parrafo {
+    font-size: 0.4rem;
+  }
+  .nav-link:hover {
+    color: #009cde; /* Cambia a un color al pasar el mouse */
+  }
+  .block-contacto-mapa {
+    width: 300px;
+  }
 }
 @media (min-width: 650px) {
-
-    .block-contacto{
-        flex-direction: row;
-    }
-    .iframe--agrim{
-        width:560px;
-        height:315px;
-    }
+  .block-contacto {
+    flex-direction: row;
+  }
+  .iframe--agrim {
+    width: 560px;
+    height: 315px;
+  }
+  .form-contacto {
+    min-width: 600px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .block-contacto-mapa {
+    width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    margin: 0 5%;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: flex-end;
+  }
+  .block-contacto-mapa {
+    width: 600px;
+  }
+}
+html {
+  font-size: 32px;
 }
 
-@media (min-width: 1020px) {
-    .container-fluid {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 5%;
-    }
-    .navbar-collapse {
-        display: flex;
-        justify-content: flex-end;
-    }
+span {
+  font-weight: bold;
 }
 
+body {
+  background-image: linear-gradient(to top, #575555, transparent);
+  color: black;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh;
+  max-width: 1080px;
+  min-width: 344px;
+  margin: 0 auto;
+}
 
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  min-width: 344px;
+}
+
+h1 {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.block-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------- Estilado de titulos h2  h3 ... --------------------- */
+.format__titulo {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.format__parrafo {
+  justify-content: end;
+  width: 90%;
+  font-size: 0.5rem;
+  font-style: italic;
+  text-align: justify;
+  border-left: 3px solid gray;
+  padding-left: 2%;
+  margin-left: 3%;
+  white-space: pre-wrap;
+}
+
+/*---------------------------- Inicio clases de estilado video pagina agrimensura ----------------*/
+/* Selecetores para dar estilo al iframe video*/
+.block-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.conteiner--iframe--agrim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe--agrim {
+  border-radius: 10px;
+}
+
+/*---------------------------- fin clases de estilado pagina agrimensura ----------------*/
+/*---------------------------- START PAGINA desarrollo ----------------*/
+.block-div h3 {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+code {
+  padding-left: 2%;
+  margin-left: 3%;
+  width: 90%;
+  background-color: gray;
+  text-align: left;
+  font-size: 0.5rem;
+  border-left: 3px solid rgb(7, 7, 7);
+  color: #7bf;
+}
+
+.text_comentario {
+  justify-content: center;
+  width: 90%;
+  font-size: 0.5rem;
+  font-style: italic;
+  text-align: justify;
+  padding: 1%;
+  margin-top: 1%;
+  margin-left: 3%;
+  white-space: pre-wrap;
+  color: #312828;
+}
+
+/*---------------------------- fin clases de estilado pagina desarrollo ----------------*/
+/*---------------------------- START PAGE CONTACTO --------------------------------*/
+.block-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-contacto__title {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.block-contacto__text {
+  font-size: 0.4rem;
+  font-style: italic;
+  text-align: justify;
+  margin-left: 1%;
+  width: 90%;
+}
+
+.form-contacto {
+  width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.imput-text {
+  background-color: #f7f2f2;
+  margin: 10px;
+  padding: 6px 12px;
+  width: 90%;
+  letter-spacing: 2px;
+  border: none;
+  border-left: 4px solid #009cde;
+  font-size: 0.4em;
+  color: #009cde;
+  font-family: inherit;
+  border-radius: 10px;
+}
+
+.title--size {
+  font-size: 0.5rem;
+}
+
+.selector-radio-button {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: transparent;
+  justify-content: flex-start;
+}
+
+.radio-item {
+  margin: 0px;
+  padding: 20px;
+  align-content: center;
+  font-size: 0.5em;
+}
+
+textarea {
+  background-color: #f7f2f2;
+  min-height: 30vh;
+  font-size: 0.4em;
+  width: 80%;
+  border-radius: 10px;
+  border-left: 4px solid #009cde;
+  margin: 10px;
+  padding: 6px 12px;
+  justify-content: center;
+}
+
+/* inicio Botón específico */
+.imput-boton {
+  padding: 10px;
+  margin: 10px;
+  background-color: #3f3e3e;
+  border: 1px solid #009cde;
+  color: #009cde;
+  font-size: 0.4rem;
+  font-weight: bold;
+  position: relative;
+  width: 30%;
+  left: 47%;
+  border-radius: 10px;
+}
+
+.imput-boton:active {
+  background-color: #009cde;
+}
+
+.imput-boton:hover {
+  background-color: #b3b6b8;
+}
+
+/* fin Botón específico */
+/* inicio mapa */
+.block-contacto-mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background-color: transparent;
+}
+
+.block-contacto-mapa__mapa {
+  width: 100%;
+  border-radius: 30px;
+}
+
+/* fin mapa */
+/*---------------------------- END PAGINA CONTACTO ----------------*/
+
+/*# sourceMappingURL=style.css.map */

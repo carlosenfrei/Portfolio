@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+@mixin boton ($bg-color-botton,$color-text-botton){
+    background-color: $bg-color-botton;
+    color: $color-text-botton;
+    font-size: 0.4rem;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*ubicacion del boton dentro del contenedor y efecto sombra*/
+.container__a{
+    text-align: right;
+    .botton:hover{
+        box-shadow: 0px 0px 10px 1px #3f3e3e;
+    }
+}
+
+.botton{
+    @include boton(v.$bg-color-botton,v.$color-text-botton);
+}

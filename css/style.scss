@@ -1,0 +1,267 @@
+
+@use './styles/variables' as v;
+@use './styles/reset';
+@use './styles/header';
+@use './styles/cards';
+@use './styles/mixin';
+@use './styles/footer';
+@use './styles/media';
+
+html{
+    font-size: v.$size-text;
+}
+span{
+    font-weight: bold;
+}
+body{
+    background-image:linear-gradient(to top, v.$bg-color-body, transparent);
+    color: v.$color-text;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header"
+                            "main"
+                            "footer";
+    min-height: 100vh;
+    max-width: 1080px;
+    min-width: 344px;
+    margin: 0 auto;
+}
+
+
+
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-width: 344px;
+}
+
+h1{
+    font-family: v.$font-title-stack; 
+    font-weight: bold;
+    font-style: italic; 
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.block-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------- Estilado de titulos h2  h3 ... --------------------- */
+.format__titulo {
+    font-family: "Times New Roman", serif; 
+    font-weight: bold;
+    font-style: italic; 
+    font-size: 1rem;
+}
+
+.format__parrafo{
+    justify-content: end;
+    width: 90%;
+    font-size: 0.5rem;
+    font-style: italic; 
+    text-align: justify;
+    border-left: 3px solid gray;
+    padding-left: 2%;
+    margin-left:3%;
+    white-space: pre-wrap;
+}
+
+/*---------------------------- Inicio clases de estilado video pagina agrimensura ----------------*/
+
+/* Selecetores para dar estilo al iframe video*/
+.block-video{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+}
+
+.conteiner--iframe--agrim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.iframe--agrim{
+    border-radius: 10px;
+}
+
+/*---------------------------- fin clases de estilado pagina agrimensura ----------------*/
+
+
+/*---------------------------- START PAGINA desarrollo ----------------*/
+
+
+
+.block-div h3{
+    font-family: v.$font-title-stack; 
+    font-weight: bold;
+    font-style: italic; 
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+code{
+    padding-left: 2%;
+    margin-left:3%;
+    width: 90%;
+    background-color: gray;
+    text-align: left;
+    font-size: 0.5rem;
+    border-left: 3px solid rgb(7, 7, 7);
+    color:v.$color-text-code;
+}
+
+.text_comentario{
+    justify-content: center;
+    width: 90%;
+    font-size: 0.5rem;
+    font-style: italic; 
+    text-align: justify;
+    padding: 1%;
+    margin-top:1%;
+    margin-left:3%;
+    white-space: pre-wrap;
+    color: #312828;
+}
+
+/*---------------------------- fin clases de estilado pagina desarrollo ----------------*/
+
+/*---------------------------- START PAGE CONTACTO --------------------------------*/
+
+.block-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-contacto__title{
+    font-family: "Times New Roman", serif; 
+    font-weight: bold;
+    font-style: italic; 
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.block-contacto__text{
+    font-size: 0.4rem;
+    font-style: italic; 
+    text-align: justify;
+    margin-left: 1%;
+    width: 90%;
+}
+
+.form-contacto{
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.imput-text{
+    background-color:  #f7f2f2;
+    margin: 10px;
+    padding: 6px 12px;
+    width: 90%; 
+    letter-spacing: 2px;
+    border: none;
+    border-left: 4px solid #009cde;
+    font-size: 0.4em;
+    color: #009cde ;
+    font-family: inherit;
+    border-radius: 10px;
+}
+.title--size{
+    font-size: 0.5rem;
+}
+
+.selector-radio-button{
+    display:flex;
+    flex-flow: row wrap;
+    background-color:transparent;
+    justify-content: flex-start;
+}
+
+.radio-item{
+    margin: 0px;
+    padding: 20px;
+    align-content: center;
+    font-size: 0.5em;
+}
+
+textarea {
+    background-color:  #f7f2f2;
+    min-height: 30vh;
+    font-size: 0.4em;
+    width: 80%;
+    border-radius: 10px;
+    border-left: 4px solid #009cde;
+    margin: 10px;
+    padding: 6px 12px;
+    justify-content: center;
+}
+
+  /* inicio Botón específico */
+.imput-boton {
+    padding: 10px;
+    margin: 10px;
+    background-color: #3f3e3e;
+    border: 1px solid #009cde;
+    color: #009cde;
+    font-size: 0.4rem;
+    font-weight: bold;
+    position:relative;
+    width: 30%;
+    left: 47%;
+    border-radius: 10px;
+}
+.imput-boton:active{
+    background-color: #009cde;
+}
+.imput-boton:hover{
+    background-color: #b3b6b8;
+}
+  /* fin Botón específico */
+
+  /* inicio mapa */
+.block-contacto-mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color:transparent;
+
+}
+
+
+.block-contacto-mapa__mapa{ 
+    width: 100%;
+    border-radius: 30px;
+
+}
+  /* fin mapa */
+/*---------------------------- END PAGINA CONTACTO ----------------*/
+
+
+
+
+
+
+
+
+

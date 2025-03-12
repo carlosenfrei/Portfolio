@@ -1,0 +1,23 @@
+/*-------------------- INICIAL FOOTER -------------------- */
+
+
+
+footer{
+    grid-area: footer;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    padding:3%;
+}
+
+.footer__parrafo {
+    text-align: center;
+    font-size: 0.7rem;
+    color:whitesmoke;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+
+/*---------------------------- END footer ----------------*/
